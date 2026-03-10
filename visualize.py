@@ -5,7 +5,6 @@ def plot_data(filename='points.csv'):
     try:
         data = pd.read_csv(filename)
         
-        # Разделяем точки по классам 
         class_0 = data[data['label'] == 0]
         class_1 = data[data['label'] == 1]
 
