@@ -13,9 +13,17 @@ public:
         std::cerr << "[ERROR] " << msg << std::endl;
     }
 
-    // Метод для вывода числовых значений (например, Loss)
     template <typename T>
     static void logValue(const std::string& label, T value) {
         std::cout << "[DATA] " << label << ": " << value << std::endl;
+    }
+
+    // Добавь этот метод для тестов
+    static void testStatus(const std::string& testName, bool passed) {
+        if (passed) {
+            std::cout << "[TEST] " << testName << ": PASSED" << std::endl;
+        } else {
+            std::cerr << "[TEST] " << testName << ": FAILED" << std::endl;
+        }
     }
 };

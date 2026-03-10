@@ -361,3 +361,23 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Исполняемые файлы 
+*.exe
+*.out
+*.app
+
+# Файлы данных и результатов
+*.csv
+*.log
+
+# Папки сборки и временные файлы IDE
+.vscode/
+.idea/
+build/
+bin/
+obj/
+
+# Временные файлы Python
+__pycache__/
+*.pyc
