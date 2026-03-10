@@ -19,9 +19,8 @@ public:
     // Возвращает пару значений (newX, newY)
 
     static std::pair<T, T> transformVector(const Matrix<T>& mat, T x, T y) {
-        // Проверка: матрица должна быть 2x2 для корректного преобразования
-        if (mat.data.size() < 4) return {x, y};
-
+        
+        // Умножение матрицы 2x2 на вектор (x, y)
         // Формула: newX = s11*x + s12*y; newY = s21*x + s22*y 
         T newX = mat(0, 0) * x + mat(0, 1) * y;
         T newY = mat(1, 0) * x + mat(1, 1) * y;
