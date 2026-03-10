@@ -1,17 +1,28 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Загружаем данные, которые только что создал твой C++ код
-data = pd.read_csv('points.csv')
+def plot_data(filename='points.csv'):
+    try:
+        data = pd.read_csv(filename)
+        
+        # Разделяем точки по классам 
+        class_0 = data[data['label'] == 0]
+        class_1 = data[data['label'] == 1]
 
-plt.figure(figsize=(10, 6))
-# Точки класса 0 (под прямой) — синие, класса 1 (над прямой) — красные
-plt.scatter(data[data['label'] == 0]['x'], data[data['label'] == 0]['y'], color='blue', label='Class 0')
-plt.scatter(data[data['label'] == 1]['x'], data[data['label'] == 1]['y'], color='red', label='Class 1')
+        plt.figure(figsize=(10, 6))
+        
+        plt.scatter(class_0['x'], class_0['y'], color='pink', label='Class 0', alpha=0.6)
+        plt.scatter(class_1['x'], class_1['y'], color='purple', label='Class 1', alpha=0.6)
 
-plt.title('Laboratory Work #1: Point Classification')
-plt.xlabel('X coordinate')
-plt.ylabel('Y coordinate')
-plt.legend()
-plt.grid(True)
-plt.show()
+        plt.title('Visualization')
+        plt.xlabel('X coordinate')
+        plt.ylabel('Y coordinate')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+        
+    except FileNotFoundError:
+        print("Ошибка: Файл points.csv не найден.")
+
+if __name__ == "__main__":
+    plot_data()

@@ -36,7 +36,7 @@ void test_data() {
 }
 
 int main() {
-    Logger::info("Running Comprehensive Unit Tests...");
+    Logger::info("Running Unit Tests...");
     try {
         test_math();
         test_metrics();
