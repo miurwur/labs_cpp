@@ -18,7 +18,7 @@ public:
         std::cout << "[DATA] " << label << ": " << value << std::endl;
     }
 
-    // Добавь этот метод для тестов
+    // Метод для тестов
     static void testStatus(const std::string& testName, bool passed) {
         if (passed) {
             std::cout << "[TEST] " << testName << ": PASSED" << std::endl;

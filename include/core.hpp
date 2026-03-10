@@ -26,6 +26,7 @@ struct Matrix {
     size_t cols;
 
     Matrix(size_t r, size_t c) : rows(r), cols(c), data(r * c, 0.0f) {}
+    // Матрица по умолчанию инициализируется нулями
 
     // Оператор доступа к элементам 
     T& operator()(size_t r, size_t c) {
