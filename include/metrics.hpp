@@ -3,7 +3,6 @@
 #include "core.hpp"
 #include <vector>
 #include <cmath>
-#include <numeric>
 
 // Модуль метрик и функций потерь
 template <FloatingPoint T>
