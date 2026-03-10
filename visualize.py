@@ -22,7 +22,7 @@ def plot_data(filename='points.csv'):
         plt.show()
         
     except FileNotFoundError:
-        print("Ошибка: Файл points.csv не найден.")
+        print("Error: File points.csv not found.")
 
 if __name__ == "__main__":
     plot_data()
